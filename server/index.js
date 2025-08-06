@@ -1,8 +1,9 @@
 import express from "express";
-import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
+import connectDB from "./config/db.js";
 import applicantRoutes from "./routes/applicantRoutes.js";
+import adminRoutes from "./routes/adminRoutes.js";
 
 dotenv.config();
 
@@ -14,12 +15,7 @@ app.use(cors());
 app.use(express.json());
 
 // DB Connection
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-.then(() => console.log("✅ MongoDB connected"))
-.catch(err => console.error("❌ MongoDB error:", err));
+connectDB();
 
 // Routes
 app.get("/", (req, res) => {
@@ -27,6 +23,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/applicants", applicantRoutes);
+app.use("/api/admin", adminRoutes);
 
 // Start Server
 app.listen(PORT, () => {

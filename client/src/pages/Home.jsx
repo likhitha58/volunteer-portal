@@ -54,7 +54,7 @@ const HomePage = () => {
         >
           <div className="container">
             <h1 className="display-3 fw-bold mb-4 animate__animated animate__fadeInDown">
-              BASTI KI PATHSHALA
+              Basti Ki Pathshala
             </h1>
             <p className="lead mb-5 animate__animated animate__fadeInUp animate__delay-1s">
               Empowering Children Through Education and Hope

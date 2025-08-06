@@ -1,16 +1,16 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Register from "./pages/Register";
-import Admin from "./pages/Admin";
 import VolunteerForm from "./pages/VolunteerModal";
+import AdminLogin from "./pages/AdminLogin";
+import AdminPanel from "./pages/AdminPanel"
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/register" element={<Register />} />
-      <Route path="/admin" element={<Admin />} />
       <Route path="/volunteer-form" element={<VolunteerForm />} />
+      <Route path="/admin" element={<AdminLogin />} />
+    <Route path="/admin-panel" element={<AdminPanel />} />
     </Routes>
   );
 };

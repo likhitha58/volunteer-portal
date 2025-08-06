@@ -1,4 +1,4 @@
-/* Make modal background transparent */
+/* Transparent modal background */
 .modal-content {
   background: transparent !important;
   border: none !important;
@@ -11,21 +11,21 @@
 
 /* Glassmorphic form container */
 .glass-form {
-  background: rgba(255, 255, 255, 0.291);
+  background: rgba(255, 255, 255, 0.3);
   border-radius: 20px;
   padding: 30px;
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.18);
   color: #000;
 }
 
-/* Form control styling */
+/* Inputs and selects */
 .glass-form .form-control,
 .glass-form .form-select {
-  background-color: rgba(255, 255, 255, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   color: #000;
   border-radius: 10px;
   padding: 10px;
@@ -33,34 +33,45 @@
 }
 
 .glass-form .form-control:focus {
-  background-color: rgba(255, 255, 255, 0.35);
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  background-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
   outline: none;
   border-color: #86b7fe;
 }
 
-/* Label styling */
-.glass-form label {
-  font-weight: 500;
-  margin-bottom: 6px;
+.glass-form .form-control::placeholder {
+  color: #555;
 }
 
-/* Modal Title styling */
+/* Form labels */
+.glass-form label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+/* Modal title */
 .modal-title {
   font-weight: 700;
-  font-size: 1.5rem;
-  color: #333;
+  font-size: 1.6rem;
+  color: #222;
+  text-align: center;
+  width: 100%;
 }
 
 /* Button styles */
 .glass-form .btn {
   border-radius: 10px;
   padding: 10px 20px;
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 .glass-form .btn-primary {
   background-color: #0d6efd;
   border-color: #0d6efd;
+  color: white;
 }
 
 .glass-form .btn-primary:hover {
@@ -71,6 +82,7 @@
 .glass-form .btn-secondary {
   background-color: #6c757d;
   border-color: #6c757d;
+  color: white;
 }
 
 .glass-form .btn-secondary:hover {
@@ -78,35 +90,48 @@
   border-color: #545b62;
 }
 
-/* Radio/checkbox centering in tables */
+/* Center checkboxes/radio buttons in tables */
 .table td,
 .table th {
-  vertical-align: middle;
+  vertical-align: middle !important;
   text-align: center;
 }
 
-/* Improve textarea look */
+/* Transparent tables */
+.table {
+  --bs-table-bg: transparent !important;
+  background-color: transparent !important;
+  color: #000;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Textarea tweaks */
 textarea.form-control {
   resize: vertical;
   min-height: 100px;
 }
 
-/* Responsive tables */
-@media (max-width: 768px) {
+/* Responsive tweaks */
+@media (max-width: 1000px) {
   .glass-form {
     padding: 20px;
   }
 
   .modal-title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
-  .form-label {
-    font-size: 0.9rem;
+  .glass-form label {
+    font-size: 0.95rem;
   }
-}
 
-.table {
-  --bs-table-bg: transparent !important;
-  background-color: transparent !important;
+  .glass-form .btn {
+    font-size: 0.95rem;
+  }
+
+  .table th,
+  .table td {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
 }
