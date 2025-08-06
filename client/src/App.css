@@ -1,6 +1,9 @@
 #root {
   font-family:'Barlow', sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 /* 
 .logo {
   height: 6em;

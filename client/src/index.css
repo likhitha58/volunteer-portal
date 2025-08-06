@@ -1,6 +1,9 @@
  :root {
   font-family: 'Barlow', sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 /*
 a {
   font-weight: 500;

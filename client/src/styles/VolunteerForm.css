@@ -1,24 +1,112 @@
-body {
-  font-family: 'Barlow', sans-serif;
+/* Make modal background transparent */
+.modal-content {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
-h2 {
+.modal-body {
+  background: transparent !important;
+}
+
+/* Glassmorphic form container */
+.glass-form {
+  background: rgba(255, 255, 255, 0.291);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #000;
+}
+
+/* Form control styling */
+.glass-form .form-control,
+.glass-form .form-select {
+  background-color: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #000;
+  border-radius: 10px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.glass-form .form-control:focus {
+  background-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  outline: none;
+  border-color: #86b7fe;
+}
+
+/* Label styling */
+.glass-form label {
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+/* Modal Title styling */
+.modal-title {
   font-weight: 700;
-  font-family: 'Barlow', sans-serif;
+  font-size: 1.5rem;
+  color: #333;
 }
 
-form label {
-  font-weight: 600;
+/* Button styles */
+.glass-form .btn {
+  border-radius: 10px;
+  padding: 10px 20px;
 }
 
-form input,
-form select,
-form textarea {
-  font-family: 'Barlow', sans-serif;
-  border-radius: 6px;
+.glass-form .btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
 }
 
-form button {
-  font-family: 'Barlow', sans-serif;
-  font-size: 1.1rem;
+.glass-form .btn-primary:hover {
+  background-color: #084298;
+  border-color: #073c91;
+}
+
+.glass-form .btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.glass-form .btn-secondary:hover {
+  background-color: #5a6268;
+  border-color: #545b62;
+}
+
+/* Radio/checkbox centering in tables */
+.table td,
+.table th {
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* Improve textarea look */
+textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Responsive tables */
+@media (max-width: 768px) {
+  .glass-form {
+    padding: 20px;
+  }
+
+  .modal-title {
+    font-size: 1.2rem;
+  }
+
+  .form-label {
+    font-size: 0.9rem;
+  }
+}
+
+.table {
+  --bs-table-bg: transparent !important;
+  background-color: transparent !important;
 }

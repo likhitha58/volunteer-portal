@@ -6,7 +6,7 @@ import img2 from "../assets/img2.png";
 import img3 from "../assets/img3.png";
 import bgHero from "../assets/bgimg.jpeg";
 import { useNavigate } from "react-router-dom";
-
+import VolunteerModal from "./VolunteerModal";
 const backgroundImages = [bgHero, img1, img2, img3];
 
 const stories = [
@@ -18,6 +18,11 @@ const stories = [
 const HomePage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showAbout, setShowAbout] = useState(false);
+  const [showVolunteerModal, setShowVolunteerModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
+  const handleOpenModal = () => setShowModal(true);
+  const handleCloseModal = () => setShowModal(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -28,8 +33,8 @@ const HomePage = () => {
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = showAbout ? 'hidden' : 'auto';
-  }, [showAbout]);
+    document.body.style.overflow = showAbout || showVolunteerModal ? 'hidden' : 'auto';
+  }, [showAbout, showVolunteerModal]);
 
   return (
     <>
@@ -58,9 +63,13 @@ const HomePage = () => {
               <button className="btn btn-lg shadow px-4 py-2 fw-semibold" style={{ backgroundColor: '#ff6f61', color: '#fff' }}>
                 Donate
               </button>
-              <button className="btn btn-lg btn-outline-light shadow px-4 py-2 fw-semibold" onClick={() => navigate("/volunteer-form")}>
+              <button
+                className="btn btn-lg btn-outline-light shadow px-4 py-2 fw-semibold"
+               onClick={handleOpenModal}
+              >
                 Volunteer
               </button>
+              <VolunteerModal show={showModal} onHide={handleCloseModal} />
             </div>
           </div>
         </section>
@@ -85,8 +94,21 @@ const HomePage = () => {
           </div>
         )}
 
+        {/* Volunteer Modal */}
+        {showVolunteerModal && (
+          <div className="modal-overlay" onClick={() => setShowVolunteerModal(false)}>
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+              <button className="close-btn" onClick={() => setShowVolunteerModal(false)}>&times;</button>
+              <iframe
+                src="https://form.jotform.com/201867105447455"
+                title="Volunteer Registration"
+              ></iframe>
+            </div>
+          </div>
+        )}
+
         {/* Stories Section */}
-        <section className="stories">
+        <section id="programs" className="stories">
           <h2>Featured Stories</h2>
           <div className="story-cards">
             {stories.map((story, idx) => (

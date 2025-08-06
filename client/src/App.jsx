@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
 import Admin from "./pages/Admin";
-import VolunteerForm from "./pages/VolunteerForm";
+import VolunteerForm from "./pages/VolunteerModal";
 const App = () => {
   return (
     <Routes>
