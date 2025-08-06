@@ -1,0 +1,24 @@
+body {
+  font-family: 'Barlow', sans-serif;
+}
+
+h2 {
+  font-weight: 700;
+  font-family: 'Barlow', sans-serif;
+}
+
+form label {
+  font-weight: 600;
+}
+
+form input,
+form select,
+form textarea {
+  font-family: 'Barlow', sans-serif;
+  border-radius: 6px;
+}
+
+form button {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.1rem;
+}
