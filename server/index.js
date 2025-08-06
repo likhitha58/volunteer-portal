@@ -2,9 +2,10 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
-import Applicant from "./models/Applicant.js";
+import applicantRoutes from "./routes/applicantRoutes.js";
 
 dotenv.config();
+
 const app = express();
 const PORT = process.env.PORT || 5000;
 
@@ -21,25 +22,13 @@ mongoose.connect(process.env.MONGO_URI, {
 .catch(err => console.error("❌ MongoDB error:", err));
 
 // Routes
-app.post("/api/applicants", async (req, res) => {
-  try {
-    const applicant = new Applicant(req.body);
-    await applicant.save();
-    res.status(201).json(applicant);
-  } catch (err) {
-    res.status(500).json({ error: "Failed to register" });
-  }
+app.get("/", (req, res) => {
+  res.send("🚀 Volunteer Portal API is running");
 });
 
-app.get("/api/applicants", async (req, res) => {
-  try {
-    const applicants = await Applicant.find().sort({ date: -1 });
-    res.status(200).json(applicants);
-  } catch (err) {
-    res.status(500).json({ error: "Failed to fetch applicants" });
-  }
-});
+app.use("/api/applicants", applicantRoutes);
 
+// Start Server
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
+  console.log(`🚀 Server running at http://localhost:${PORT}`);
 });
