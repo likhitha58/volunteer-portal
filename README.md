@@ -134,7 +134,10 @@ Add screenshots here:
  <img width="1912" height="959" alt="image" src="https://github.com/user-attachments/assets/cf04b211-7b10-4f14-bc3c-f0051e62394c" />
 - 📊 Admin Dashboard
  <img width="1915" height="971" alt="image" src="https://github.com/user-attachments/assets/2051f5a6-7209-400d-94a4-1d5b7b0ba619" />
----
+
+## 🛢️ Database (MongoDB)
+- Database: volunteerDB
+- Collection: applicants, admins
 
 ## 🤝 Contributing
 
@@ -153,5 +156,6 @@ MIT
 
 Designed and Developed by **Likhitha**  
 Built using the **MERN Stack** with ❤️
+
 
 
