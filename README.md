@@ -122,10 +122,18 @@ To login as **admin**, manually insert an admin user in your MongoDB `Applicants
 Add screenshots here:
 
 - ✅ Home Page
+  <img width="1919" height="969" alt="Screenshot 2025-08-06 194516" src="https://github.com/user-attachments/assets/933841a3-6e1f-41b3-b713-c896a0d6fa96" />
+-  About Section
+-  <img width="1916" height="965" alt="Screenshot 2025-08-06 194532" src="https://github.com/user-attachments/assets/0e2b4993-4ce5-4e8b-9bcb-16c9af2e4616" />
+-  Activities Section
+-  <img width="1917" height="965" alt="Screenshot 2025-08-06 194541" src="https://github.com/user-attachments/assets/7ce95806-84d9-4829-8815-f6b68dba0278" />
 - 📝 Volunteer Form
+  <img width="1919" height="970" alt="image" src="https://github.com/user-attachments/assets/c50b02a5-dcf7-4a6e-a632-72c5ef1f134f" />
+  <img width="1919" height="968" alt="image" src="https://github.com/user-attachments/assets/2e6b7078-fb8a-410e-872f-721a690215c3" />
 - 🔐 Admin Login Page
+ <img width="1912" height="959" alt="image" src="https://github.com/user-attachments/assets/cf04b211-7b10-4f14-bc3c-f0051e62394c" />
 - 📊 Admin Dashboard
-
+ <img width="1915" height="971" alt="image" src="https://github.com/user-attachments/assets/2051f5a6-7209-400d-94a4-1d5b7b0ba619" />
 ---
 
 ## 🤝 Contributing
@@ -145,4 +153,5 @@ MIT
 
 Designed and Developed by **Likhitha**  
 Built using the **MERN Stack** with ❤️
+
 
