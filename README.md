@@ -1,4 +1,4 @@
-# 🌟 Volunteer Portal
+#  Volunteer Portal
 
 A MERN stack web application to manage **volunteer/intern registrations** with an **admin panel** to view applicants.
 
@@ -156,6 +156,7 @@ MIT
 
 Designed and Developed by **Likhitha**  
 Built using the **MERN Stack** with ❤️
+
 
 
 
